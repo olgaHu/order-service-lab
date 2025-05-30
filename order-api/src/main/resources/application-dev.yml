@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order-api
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/order-service
+  redis:
+    host: localhost
+    port: 6379
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    timeout: 5000ms
+
+logging:
+  level:
+    root: INFO
+    com.ailab: DEBUG
+    org.springframework.amqp: INFO
+    org.springframework.data.mongodb: INFO 
