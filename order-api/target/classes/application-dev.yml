@@ -17,9 +17,15 @@ spring:
     password: guest
     timeout: 5000ms
 
+rabbitmq:
+  order:
+    exchange: order.exchange
+    queue: order.created.queue
+    routing-key: order.created
+
 logging:
   level:
     root: INFO
-    com.ailab: DEBUG
+    olga.ailab: DEBUG
     org.springframework.amqp: INFO
     org.springframework.data.mongodb: INFO 

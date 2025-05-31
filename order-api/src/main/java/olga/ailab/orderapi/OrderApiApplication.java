@@ -1,27 +1,30 @@
-package com.ailab.orderworker;
+package olga.ailab.orderapi;
 
+import olga.ailab.common.config.RabbitOrderProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-    "com.ailab.orderworker",
-    "com.ailab.common"
+    "olga.ailab.orderapi",
+    "olga.ailab.common"
 })
 @EntityScan(basePackages = {
-    "com.ailab.orderworker.entity",
-    "com.ailab.common.entity"
+    "olga.ailab.orderapi.entity",
+    "olga.ailab.common.entity"
 })
 @EnableMongoRepositories(basePackages = {
-    "com.ailab.orderworker.repository",
-    "com.ailab.common.repository"
+    "olga.ailab.orderapi.repository",
+    "olga.ailab.common.repository"
 })
-public class OrderWorkerApplication {
+@EnableConfigurationProperties(RabbitOrderProperties.class)
+public class OrderApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderWorkerApplication.class, args);
+        SpringApplication.run(OrderApiApplication.class, args);
     }
 } 

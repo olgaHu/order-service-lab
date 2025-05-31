@@ -23,3 +23,7 @@
 hs_err_pid*
 replay_pid*
 .idea/
+common/target/
+order-api/target/
+order-worker/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+order-worker/target/

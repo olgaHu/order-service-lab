@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>com.ailab</groupId>
+        <groupId>olga.ailab</groupId>
         <artifactId>order-service-lab</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -34,9 +34,19 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+
         <!-- 內部模組依賴 -->
         <dependency>
-            <groupId>com.ailab</groupId>
+            <groupId>olga.ailab</groupId>
             <artifactId>common</artifactId>
         </dependency>
     </dependencies>
@@ -47,7 +57,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.ailab.orderworker.OrderWorkerApplication</mainClass>
+                    <mainClass>olga.ailab.orderworker.OrderWorkerApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

@@ -23,9 +23,15 @@ spring:
           max-interval: 10000
           multiplier: 2.0
 
+rabbitmq:
+  order:
+    exchange: order.exchange
+    queue: order.created.queue
+    routing-key: order.created
+
 logging:
   level:
     root: INFO
-    com.ailab: DEBUG
+    olga.ailab: DEBUG
     org.springframework.amqp: INFO
     org.springframework.data.mongodb: INFO 

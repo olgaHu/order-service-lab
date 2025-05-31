@@ -26,6 +26,6 @@ spring:
 logging:
   level:
     root: INFO
-    com.ailab: DEBUG
+    olga.ailab: DEBUG
     org.springframework.amqp: INFO
     org.springframework.data.mongodb: INFO 
